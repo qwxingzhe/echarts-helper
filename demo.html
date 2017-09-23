@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>echarts-helper</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+
+	</style>
+</head>
+<body>
+	
+
+
+
+饼状图
+    <div 	class="echart-canvas" 
+    		echart-data='{"1":{"key_id":1,"title":"\u57fa\u7840\u77e5\u8bc6","get_score":11,"group_total_score":13,"group_score_proportion":0.84615384615385,"analysis":[{"id":11,"project_id":2,"create_uid":1,"create_time":"2017-08-12 17:15:15","update_time":"2017-08-12 17:15:15","uuid":"62d03e7e-8c48-a0a6-8cfb-322f1b014c97","analysis_type":"topic_group_analysis","key_id":1,"min_score":9,"max_score":13,"group_total_score":13,"content":"\u57fa\u7840\u77e5\u8bc6\u8fd8\u884c"}],"group_score_proportion_format":"84.62%"},"2":{"key_id":2,"title":"\u52a0\u5206\u77e5\u8bc6","get_score":0,"group_total_score":5,"group_score_proportion":0,"analysis":[],"group_score_proportion_format":"0%"},"0":{"key_id":0,"title":"\u672a\u5206\u7ec4","get_score":1,"group_total_score":5,"group_score_proportion":0.2,"analysis":[],"group_score_proportion_format":"20%"}}' 
+            echart-config='{title:"分组得分占比图",type:"pie",name_key:"title",value_key:"get_score"}' 
+            echart-option="{}" 
+            style="width: 100%; height: 430px; margin: 0 auto"></div>
+
+
+
+柱状图
+    <div 	class="echart-canvas" 
+    		echart-data='[{"id":101,"answer_id":43,"project_id":2,"prev_topic_id":0,"topic_id":55,"answer_value":"169","start_time":"2017-09-16 18:11:18","end_time":"2017-09-16 18:12:57","answer_status":1,"use_second":99,"answer_get_score":10,"answer_right_status":1,"evaluation":null,"topic_tip":"\u7b2c1\u9898"},{"id":102,"answer_id":43,"project_id":2,"prev_topic_id":55,"topic_id":56,"answer_value":"173,174","start_time":"2017-09-16 18:12:59","end_time":"2017-09-16 18:13:05","answer_status":1,"use_second":6,"answer_get_score":5,"answer_right_status":1,"evaluation":null,"topic_tip":"\u7b2c2\u9898"},{"id":103,"answer_id":43,"project_id":2,"prev_topic_id":56,"topic_id":57,"answer_value":"177","start_time":"2017-09-16 18:13:07","end_time":"2017-09-16 18:13:10","answer_status":1,"use_second":3,"answer_get_score":1,"answer_right_status":0,"evaluation":null,"topic_tip":"\u7b2c3\u9898"},{"id":104,"answer_id":43,"project_id":2,"prev_topic_id":57,"topic_id":60,"answer_value":"189","start_time":"2017-09-16 18:13:12","end_time":"2017-09-16 18:13:16","answer_status":1,"use_second":4,"answer_get_score":1,"answer_right_status":2,"evaluation":null,"topic_tip":"\u7b2c4\u9898"}]' 
+            echart-config='{type:"bar",name_key:"topic_tip",value_key:"use_second",data_name:"单题用时/秒"}' 
+            echart-option='{title:{},yAxis: {type: "value",axisLabel: {formatter: "{value} 秒"}}}'
+            style="width: 100%; height: 430px; margin: 0 auto"></div>
+
+折线图
+    <div 	class="echart-canvas" 
+    		echart-data='[{"id":101,"answer_id":43,"project_id":2,"prev_topic_id":0,"topic_id":55,"answer_value":"169","start_time":"2017-09-16 18:11:18","end_time":"2017-09-16 18:12:57","answer_status":1,"use_second":99,"answer_get_score":10,"answer_right_status":1,"evaluation":null,"topic_tip":"\u7b2c1\u9898"},{"id":102,"answer_id":43,"project_id":2,"prev_topic_id":55,"topic_id":56,"answer_value":"173,174","start_time":"2017-09-16 18:12:59","end_time":"2017-09-16 18:13:05","answer_status":1,"use_second":6,"answer_get_score":5,"answer_right_status":1,"evaluation":null,"topic_tip":"\u7b2c2\u9898"},{"id":103,"answer_id":43,"project_id":2,"prev_topic_id":56,"topic_id":57,"answer_value":"177","start_time":"2017-09-16 18:13:07","end_time":"2017-09-16 18:13:10","answer_status":1,"use_second":3,"answer_get_score":1,"answer_right_status":0,"evaluation":null,"topic_tip":"\u7b2c3\u9898"},{"id":104,"answer_id":43,"project_id":2,"prev_topic_id":57,"topic_id":60,"answer_value":"189","start_time":"2017-09-16 18:13:12","end_time":"2017-09-16 18:13:16","answer_status":1,"use_second":4,"answer_get_score":1,"answer_right_status":2,"evaluation":null,"topic_tip":"\u7b2c4\u9898"}]' 
+            echart-config='{type:"line",name_key:"topic_tip",value_key:"use_second",data_name:"单题用时/秒"}' 
+            echart-option='{title:{},yAxis: {type: "value",axisLabel: {formatter: "{value} 秒"}}}'
+            style="width: 100%; height: 430px; margin: 0 auto"></div>
+
+
+组合折线图
+    <div 	class="echart-canvas" 
+    		echart-data='[{"project_id":2,"count":2,"day":"2017-09-17","project_name":"\u4e2d\u7ea7PHP\u5de5\u7a0b\u5e08","proportion":"10%"},{"project_id":2,"count":3,"day":"2017-09-16","project_name":"\u4e2d\u7ea7PHP\u5de5\u7a0b\u5e08","proportion":"14%"},{"project_id":2,"count":1,"day":"2017-09-10","project_name":"\u4e2d\u7ea7PHP\u5de5\u7a0b\u5e08","proportion":"5%"},{"project_id":7,"count":2,"day":"2017-08-30","project_name":"\u6781\u901f\u804c\u4e1a\u6d4b\u8bc4","proportion":"10%"},{"project_id":2,"count":1,"day":"2017-08-30","project_name":"\u4e2d\u7ea7PHP\u5de5\u7a0b\u5e08","proportion":"5%"},{"project_id":7,"count":1,"day":"2017-08-29","project_name":"\u6781\u901f\u804c\u4e1a\u6d4b\u8bc4","proportion":"5%"},{"project_id":2,"count":1,"day":"2017-08-29","project_name":"\u4e2d\u7ea7PHP\u5de5\u7a0b\u5e08","proportion":"5%"},{"project_id":7,"count":1,"day":"2017-08-28","project_name":"\u6781\u901f\u804c\u4e1a\u6d4b\u8bc4","proportion":"5%"},{"project_id":7,"count":1,"day":"2017-08-27","project_name":"\u6781\u901f\u804c\u4e1a\u6d4b\u8bc4","proportion":"5%"},{"project_id":7,"count":1,"day":"2017-08-26","project_name":"\u6781\u901f\u804c\u4e1a\u6d4b\u8bc4","proportion":"5%"},{"project_id":7,"count":1,"day":"2017-08-25","project_name":"\u6781\u901f\u804c\u4e1a\u6d4b\u8bc4","proportion":"5%"},{"project_id":7,"count":2,"day":"2017-08-24","project_name":"\u6781\u901f\u804c\u4e1a\u6d4b\u8bc4","proportion":"10%"},{"project_id":2,"count":2,"day":"2017-08-24","project_name":"\u4e2d\u7ea7PHP\u5de5\u7a0b\u5e08","proportion":"10%"},{"project_id":2,"count":1,"day":"2017-08-23","project_name":"\u4e2d\u7ea7PHP\u5de5\u7a0b\u5e08","proportion":"5%"},{"project_id":2,"count":1,"day":"2017-08-21","project_name":"\u4e2d\u7ea7PHP\u5de5\u7a0b\u5e08","proportion":"5%"}]' 
+            echart-config='{type:"line",name_key:"day",value_key:"count",data_key:"project_name"}' 
+            echart-option='{title:{},yAxis: {type: "value",axisLabel: {formatter: "{value} 人次"}}}'
+            style="width: 100%; height: 430px; margin: 0 auto"></div>
+
+
+仪表盘
+	<div 	class="echart-canvas" 
+	        		echart-data='{"id":43,"project_id":2,"project_version":"20170916173800","ip":"127.0.0.1","session_id":"lme8q60bpmfj3dkrs8ktuapqa4","uid":0,"topic_num":4,"start_time":"2017-09-16 17:49:01","end_time":"2017-09-16 18:13:22","use_second":1455,"answer_status":4,"summary_info":"{\"project_info\":{\"id\":2,\"title\":\"\\u4e2d\\u7ea7PHP\\u5de5\\u7a0b\\u5e08\",\"pc_id\":2,\"organization_id\":652504,\"create_uid\":1,\"pro_cover_id\":52,\"simp_desc\":\"\\u624d\\u7855\\u4e2d\\u7ea7PHP\\u5de5\\u7a0b\\u5e08\\u62db\\u8058\",\"descripition\":\"\",\"sort\":9999,\"is_global_analysis\":1,\"is_topic_group_analysis\":1,\"is_topic_category_analysis\":1,\"expected_duration\":12,\"join_num\":8,\"completion_num\":6,\"comment_num\":0,\"project_total_score\":24,\"topic_num\":4,\"topic_category_num\":4,\"topic_group_num\":2,\"create_time\":\"2017-05-29 11:23:09\",\"update_time\":\"2017-09-16 17:38:00\",\"project_version\":\"20170823001703\",\"status\":1,\"is_show_difficulty\":1,\"project_difficulty\":4,\"unique_code\":\"LGkGv7v\"},\"analysis_data\":{\"global_analysis\":[{\"key_id\":0,\"title\":\"\\u603b\\u5206\\u7edf\\u8ba1\",\"get_score\":17,\"group_total_score\":24,\"group_score_proportion\":0.70833333333333,\"analysis\":[{\"id\":10,\"project_id\":2,\"create_uid\":1,\"create_time\":\"2017-08-12 17:14:13\",\"update_time\":\"2017-08-12 17:14:13\",\"uuid\":\"8146fbcb-f53d-ae5d-0cfc-5e69be7db65d\",\"analysis_type\":\"global_analysis\",\"key_id\":0,\"min_score\":16,\"max_score\":25,\"group_total_score\":23,\"content\":\"A\\u7ea7\"}],\"group_score_proportion_format\":\"70.83%\"}],\"topic_group_analysis\":{\"1\":{\"key_id\":1,\"title\":\"\\u57fa\\u7840\\u77e5\\u8bc6\",\"get_score\":11,\"group_total_score\":13,\"group_score_proportion\":0.84615384615385,\"analysis\":[{\"id\":11,\"project_id\":2,\"create_uid\":1,\"create_time\":\"2017-08-12 17:15:15\",\"update_time\":\"2017-08-12 17:15:15\",\"uuid\":\"62d03e7e-8c48-a0a6-8cfb-322f1b014c97\",\"analysis_type\":\"topic_group_analysis\",\"key_id\":1,\"min_score\":9,\"max_score\":13,\"group_total_score\":13,\"content\":\"\\u57fa\\u7840\\u77e5\\u8bc6\\u8fd8\\u884c\"}],\"group_score_proportion_format\":\"84.62%\"},\"2\":{\"key_id\":2,\"title\":\"\\u52a0\\u5206\\u77e5\\u8bc6\",\"get_score\":5,\"group_total_score\":5,\"group_score_proportion\":1,\"analysis\":[{\"id\":12,\"project_id\":2,\"create_uid\":1,\"create_time\":\"2017-08-12 17:16:20\",\"update_time\":\"2017-08-12 17:16:20\",\"uuid\":\"44fe908d-058e-6285-c88c-c0973a4b2c3d\",\"analysis_type\":\"topic_group_analysis\",\"key_id\":2,\"min_score\":4,\"max_score\":5,\"group_total_score\":5,\"content\":\"\\u725bX\"}],\"group_score_proportion_format\":\"100%\"},\"0\":{\"key_id\":0,\"title\":\"\\u672a\\u5206\\u7ec4\",\"get_score\":1,\"group_total_score\":6,\"group_score_proportion\":0.16666666666667,\"analysis\":[],\"group_score_proportion_format\":\"16.67%\"}},\"topic_category_analysis\":{\"16\":{\"key_id\":16,\"title\":\"\\u7f13\\u5b58\\u6280\\u672f\",\"get_score\":10,\"group_total_score\":10,\"group_score_proportion\":1,\"analysis\":[{\"id\":13,\"project_id\":2,\"create_uid\":1,\"create_time\":\"2017-08-20 14:33:08\",\"update_time\":\"2017-08-20 14:33:08\",\"uuid\":\"8721f2d5-c6ca-a938-d15f-38c8e05adeeb\",\"analysis_type\":\"topic_category_analysis\",\"key_id\":16,\"min_score\":1,\"max_score\":10,\"group_total_score\":10,\"content\":\"AAA\"}],\"group_score_proportion_format\":\"100%\"},\"15\":{\"key_id\":15,\"title\":\"MVC\",\"get_score\":5,\"group_total_score\":5,\"group_score_proportion\":1,\"analysis\":[{\"id\":14,\"project_id\":2,\"create_uid\":1,\"create_time\":\"2017-08-20 14:33:08\",\"update_time\":\"2017-08-20 14:33:08\",\"uuid\":\"5a968a09-544f-115b-7669-a256bed8a8f0\",\"analysis_type\":\"topic_category_analysis\",\"key_id\":15,\"min_score\":1,\"max_score\":5,\"group_total_score\":5,\"content\":\"BBBB\"}],\"group_score_proportion_format\":\"100%\"},\"0\":{\"key_id\":0,\"title\":\"\\u672a\\u5206\\u7c7b\",\"get_score\":2,\"group_total_score\":9,\"group_score_proportion\":0.22222222222222,\"analysis\":[{\"id\":15,\"project_id\":2,\"create_uid\":1,\"create_time\":\"2017-08-20 14:33:08\",\"update_time\":\"2017-08-20 14:33:08\",\"uuid\":\"4c9d1540-1e18-e648-1955-950a399e18fe\",\"analysis_type\":\"topic_category_analysis\",\"key_id\":0,\"min_score\":0,\"max_score\":2,\"group_total_score\":8,\"content\":\"111\"}],\"group_score_proportion_format\":\"22.22%\"}}}}","browser_info":"Chrome(60.0.3112.113)","os_info":"Windows 10","get_score":17,"project_total_score":24,"get_score_proportion":0.70833333333333,"use_second_format":"1455\u79d2","get_score_proportion_centesimal":70.833333333333}' 
+	                echart-config='{type:"gauge",data_name:"得分统计",name_value:"正确率",value_key:"get_score_proportion_centesimal"}' 
+	                echart-option='{title :{}}'
+	                style="width: 100%; height: 430px; margin: 0 auto"></div>
+
+
+
+雷达图
+	<div 	class="echart-canvas" 
+	        		echart-data='{"1":{"key_id":1,"title":"\u57fa\u7840\u77e5\u8bc6","get_score":11,"group_total_score":13,"group_score_proportion":0.84615384615385,"analysis":[{"id":11,"project_id":2,"create_uid":1,"create_time":"2017-08-12 17:15:15","update_time":"2017-08-12 17:15:15","uuid":"62d03e7e-8c48-a0a6-8cfb-322f1b014c97","analysis_type":"topic_group_analysis","key_id":1,"min_score":9,"max_score":13,"group_total_score":13,"content":"\u57fa\u7840\u77e5\u8bc6\u8fd8\u884c"}],"group_score_proportion_format":"84.62%"},"2":{"key_id":2,"title":"\u52a0\u5206\u77e5\u8bc6","get_score":5,"group_total_score":5,"group_score_proportion":1,"analysis":[{"id":12,"project_id":2,"create_uid":1,"create_time":"2017-08-12 17:16:20","update_time":"2017-08-12 17:16:20","uuid":"44fe908d-058e-6285-c88c-c0973a4b2c3d","analysis_type":"topic_group_analysis","key_id":2,"min_score":4,"max_score":5,"group_total_score":5,"content":"\u725bX"}],"group_score_proportion_format":"100%"},"0":{"key_id":0,"title":"\u672a\u5206\u7ec4","get_score":1,"group_total_score":6,"group_score_proportion":0.16666666666667,"analysis":[],"group_score_proportion_format":"16.67%"}}' 
+	                echart-config='{type:"radar",name_key:"title",value_key:"get_score",max_key:"group_total_score",data_name:"得分"}' 
+	                echart-option='{title :{}}'
+	                style="width: 100%; height: 430px; margin: 0 auto"></div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script src="jquery-1.9.1.min.js"></script>
+<script src="echarts.min.js"></script>
+<script src="theme/infographic.js"></script>
+<script src="echarts.helper.js"></script>
+
+</html>
